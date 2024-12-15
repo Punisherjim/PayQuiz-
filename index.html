@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>PayQuiz</h1>
+        </div>
+        <div class="balance" id="coin-balance-container">
+    <i class="fas fa-coins"></i> <span id="coin-balance">0</span>
+</div>
+<div class="icons">
+    <div class="icon" id="notification-icon">
+    <i class="fas fa-bell"></i>
+    <span id="notification-badge" class="badge"></span> <!-- Badge para sa notifications -->
+</div>
+
+<!-- Notification dropdown (initially hidden) -->
+<div id="notification-dropdown" class="notification-dropdown">
+    <ul id="notification-list">
+        <!-- Notifications will be appended here dynamically -->
+    </ul>
+</div>
+    <div class="icon" id="user-icon">
+        <i class="fas fa-user"></i>
+    </div>
+    <!-- Placeholder for User Info -->
+<div id="header-balance"></div>
+</div>
+    </header>
+
+    <!-- Math Quiz Section -->
+    <div class="quiz-container">
+        <h2>Math Quiz</h2>
+        <div class="question">
+            <p id="question-text">Loading question...</p>
+        </div>
+        <input type="number" id="answer" placeholder="Enter your answer">
+        <button id="submit-btn">Submit</button>
+        <div id="pop-up" class="pop-up"></div>
+    </div>
+    
+    <!-- Ads Section -->
+<!-- Container para sa mga ads -->
+<div id="ads-container"></div>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5513582615020224" crossorigin="anonymous"></script>
+
+<!-- Jimad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5513582615020224"
+     data-ad-slot="3003742365"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <!-- User Modal for Login and Sign-Up -->
+<div id="user-modal" class="modal">
+    <div class="modal-content">
+        <!-- Close Icon -->
+        <span id="close-modal" class="close-icon">&times;</span>
+        
+        <!-- Login Form (Default Displayed) -->
+        <div id="login-form" class="form active">
+            <h3>Login</h3>
+            <div class="row">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="login-email" placeholder="Email" required />
+            </div>
+            <div class="row">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="login-password" placeholder="Password" required />
+            </div>
+            <div class="pass"><a href="#">Forgot password?</a></div>
+            <div class="row button">
+                <input type="submit" id="login-btn" value="Login" />
+            </div>
+            <div class="signup-link">
+                Not a member? <a href="#" id="show-signup">Signup now</a>
+            </div>
+        </div>
+
+        <!-- Sign-Up Form (Initially Hidden) -->
+        <div id="signup-form" class="form">
+            <h3>Sign Up</h3>
+            <div class="row">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="signup-email" placeholder="Email" required />
+            </div>
+            <div class="row">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="signup-password" placeholder="Password" required />
+            </div>
+            <div class="row button">
+                <input type="submit" id="signup-btn" value="Sign Up" />
+            </div>
+            <div class="signup-link">
+                Already have an account? <a href="#" id="show-login">Login now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cash Out Modal Form -->
+<div id="cash-out-form" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-cashout-modal">&times;</span>
+        <h2>Cash Out Form</h2>
+        <p>Your Coin Balance: <span id="user-coins"></span> points (Equivalent: $<span id="usd-equivalent"></span>)</p>
+        <form id="cash-out-request-form">
+            <label for="amount">Enter amount to cash out (in points):</label>
+            <input type="number" id="amount" name="amount" min="2000" max="5000" required>
+            
+            <!-- G-Cash Information -->
+            <label for="gcash-name">G-Cash Name:</label>
+            <input type="text" id="gcash-name" name="gcash-name" required>
+            
+            <label for="gcash-number">G-Cash Number:</label>
+            <input type="text" id="gcash-number" name="gcash-number" required>
+            
+            <button type="submit" id="submit-cash-out">Submit Request</button>
+        </form>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

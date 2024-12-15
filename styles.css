@@ -1,0 +1,368 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #333;
+    color: gainsboro;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .balance {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #fcaf38;
+}
+
+header .balance i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+header .icons {
+    display: flex;
+    gap: 20px;
+}
+
+header .icons .icon i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Quiz Section */
+.quiz-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: wheat;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-container input, button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+}
+
+button {
+    background-color: #50A3A4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #F95335;
+}
+
+/* User Modal */
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: wheat;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Icon */
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-icon:hover {
+    color: red;
+}
+
+/* Form Layout */
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.row i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.row input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.pass a {
+    text-decoration: none;
+    color: #50A3A4;
+    font-size: 14px;
+}
+
+.pass a:hover {
+    text-decoration: underline;
+}
+
+.row.button input {
+    background-color: #50A3A4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.row.button input:hover {
+    background-color: #F95335;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    text-decoration: none;
+    color: #50A3A4;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Cash Out Modal */
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Notification Styles */
+.notification {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Additional CSS for new fields (G-Cash info) */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* For Notification Icon */
+#notification-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+#notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.notification-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-dropdown ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification-dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.notification-dropdown ul li p {
+    margin: 0;
+}
+
+/* Ads Section */
+#ads-container {
+    margin-top: 20px; /* Distansya mula sa Quiz Game */
+    text-align: center; /* Tinutulungan nito na maging center ang ad */
+}
+
+/* For Desktop View */
+@media (max-width: 1024px) {
+    .quiz-container {
+    margin: 20px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-container input, button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+}
+
+button {
+    background-color: #50A3A4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Icon */
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+}
